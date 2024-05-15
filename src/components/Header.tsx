@@ -100,16 +100,25 @@ export function Header() {
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => router.push("#")}>
+              <DropdownMenuItem
+                className={"hover:cursor-pointer"}
+                onClick={() => router.push("#")}
+              >
                 <Info className="mr-2 h-4 w-4" />
                 <span>Personal Info</span>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => router.push("/create-activity")}>
+              <DropdownMenuItem
+                className={"hover:cursor-pointer"}
+                onClick={() => router.push("/create-activity")}
+              >
                 <Plus className="mr-2 h-4 w-4" />
                 <span>Create Activity</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => console.log("Logout")}>
+              <DropdownMenuItem
+                className={"hover:cursor-pointer"}
+                onClick={() => console.log("Logout")}
+              >
                 <LogOut className="mr-2 h-4 w-4" />
                 <span>Logout</span>
               </DropdownMenuItem>

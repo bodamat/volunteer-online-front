@@ -7,10 +7,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useRouter } from "next/router";
 
 export function ActivityCard({ activity }: { activity: ActivityItem }) {
+  const router = useRouter();
+
   return (
-    <Card className="md:max-w-sm overflow-hidden shadow-card hover:cursor-pointer hover:shadow-xl">
+    <Card
+      className="md:max-w-sm overflow-hidden shadow-card hover:cursor-pointer hover:shadow-xl"
+      onClick={() => router.push(`/activity/${activity.slug}`)}
+    >
       <CardHeader className={"p-0 pb-1"}>
         <div className="overflow-hidden">
           <img
